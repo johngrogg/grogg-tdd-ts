@@ -1,8 +1,10 @@
+import { default as Repository, Schema } from './repository';
 import Validator from './validator';
 
 const saveSchema = async (
   schemaStr: string,
-  validator: Validator
+  validator: Validator,
+  repository: Repository
 ): Promise<Schema> => {
   try {
     validator.validate(schemaStr);
@@ -20,9 +22,5 @@ const saveSchema = async (
     resolve(output);
   });
 };
-export interface Schema {
-  uuid: string;
-  schema: string;
-}
 
 export { saveSchema as default };
