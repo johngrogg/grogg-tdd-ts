@@ -1,4 +1,9 @@
-const saveSchema = async (schemaStr: string): Promise<Schema> => {
+import Validator from './validator';
+
+const saveSchema = async (
+  schemaStr: string,
+  validator: Validator
+): Promise<Schema> => {
   const output = {
     schema: schemaStr,
   } as any;

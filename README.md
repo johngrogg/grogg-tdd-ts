@@ -30,4 +30,5 @@ To run the application run `yarn start '{"myAttribute": "string"}'`. However, br
 
 ## Code State
 
+- T1: Introduced the first test block related to JSON Schema validation. It is currently failing, but is ready for implementation.
 - T0: Basic repo setup with just the framework of tests in place, but no real functionality.
