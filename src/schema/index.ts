@@ -12,15 +12,11 @@ const saveSchema = async (
     throw new Error('Error validating input string: ' + error.message);
   }
 
-  const output = {
-    schema: schemaStr,
-  } as any;
-
-  output.uuid = 'test';
-
-  return new Promise((resolve, reject) => {
-    resolve(output);
-  });
+  try {
+    return await repository.save(schemaStr);
+  } catch (error) {
+    throw new Error('Error saving input string: ' + error.message);
+  }
 };
 
 export { saveSchema as default };
