@@ -1,6 +1,7 @@
 import saveSchema from './index';
 import Validator from './validator';
 import { default as Repository, Schema } from './repository';
+import ORM from '../orm';
 
 describe('#saveSchema', () => {
   let mockValidator: Validator;
@@ -13,7 +14,7 @@ describe('#saveSchema', () => {
       .mockReturnValue(true)
       .mockName('validate');
 
-    mockRepository = new Repository();
+    mockRepository = new Repository({} as ORM);
     mockRepository.save = jest
       .fn<Promise<Schema>, [string]>()
       .mockResolvedValue({

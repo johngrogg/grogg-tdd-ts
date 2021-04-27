@@ -30,6 +30,7 @@ To run the application run `yarn start '{"myAttribute": "string"}'`. However, br
 
 ## Code State
 
+- T5: Add ORM abstraction to Repository, implemented first test for Repository#Save, but failing due to lack of implementation.
 - T4: Finished implementing the saveSchema, using a stub of a data repository. All tests passing, but the buit app doesn't actually save anything because the data repository is not actually implemented.
 - T3: Added a new test that introduces a mock of our data repository abstraction. At this point, the entire saveSchema behavior is now tested (but not yet implemented).
 - T2: Used the stub of a Validator class, and used it to get the test passing.

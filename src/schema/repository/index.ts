@@ -1,7 +1,7 @@
-// TODO: implement this using some third party JSON schema validation package
+import ORM from '../../orm';
 
 export default class Repository {
-  constructor() {}
+  constructor(private orm: ORM) {}
 
   public async save(schemaString: string): Promise<Schema> {
     const dbRequest: Promise<Schema> = new Promise((resolve, reject) => {
